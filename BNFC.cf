@@ -1,0 +1,15 @@
+Easign.	 Assign	  ::= Id     "=" Expr ;
+Emod.	 Expr	  ::= Expr   "%" Term ;
+Eadd.    Expr	  ::= Expr   "+" Term ;
+Eprec1.  Expr	  ::= Term ;
+Elsthan. Term	  ::= Term   "<" Factor ;
+Epower.  Term	  ::= Factor "^" Term ;
+Eprec2.  Term	  ::= Factor ;
+Emulti.	 Factor   ::= Factor "*" Newexpr ;
+Eprec3.  Factor   ::= Newexpr ;
+Eparnc.  Newexpr  ::= "(" Expr ")" ;
+Eprec4.  Newexpr  ::=  Id ;
+Eidentifier1. Id  ::= "A" ;
+Eidentifier2. Id  ::= "B" ;
+Eidentifier3. Id  ::= "C" ;
+Eidentifier4. Id  ::= "D" ;

@@ -1,0 +1,11 @@
+// for associativity rules as it wasn't defined in assesment's description 
+// i have used the two operator properties tables in lecture 2 page 6  associativity rules
+// however if that wasn't what intended to do for assesment the basic idea is simple :
+// right associative operators described using right recursive rules & left associative
+// operators described using left recursive rules this will do the trick 
+<assign>    ->  <id> = <expr>
+<expr>      ->  <expr> % <term> | <expr> + <term> | <term>
+<term>      ->  <term> < <factor> | <factor> ^ <term> | <factor>
+<factor>    ->  <factor> * <newexpr> | <newexpr>
+<newexpr>   ->  ( <expr> ) | <id>
+<id>        ->  A | B | C | D
